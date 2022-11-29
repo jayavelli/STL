@@ -23,10 +23,14 @@ int main(){
     auto y=find(A.begin(),A.end(),20);//it finds 20 and assingns its add to y
     //to know index of y
     int ind=y-A.begin();
+     auto z=binary_search(A.begin(),A.end(),30);//it works only if vector is in sorted order,it tells whether element exists or not
+    cout<<z<<" ";//binary search always gives boolena value
     if(y!=A.end()){
         cout<<"Yes"<<"\n";
     }
     else{
         cout<<"No"<<"\n";
     }
+    auto lb=lower_bound(A.begin(),A.end(),20);
+    auto ub=upper_bound(A.begin(),A.end(),20);
 }
